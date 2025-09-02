@@ -3,7 +3,7 @@ from pathlib import Path
 from markdown import Markdown
 from pymarkdown.api import PyMarkdownApi, PyMarkdownApiException
 
-morphe_folder = Path()
+morphe_folder = Path().parent
 
 phenomena_path = morphe_folder / 'Феномен'
 db_path = morphe_folder / 'morphe.db'
@@ -17,7 +17,7 @@ def load_mds(mds_path):
     for file in phenomena_path.glob('*.md'):
         print(file.name)
         mds_path[file.stem] = file
-        mds_content[file.stem] = 
+        #mds_content[file.stem]
         print(mds)
 
 def check_mds_syntax(mds):
